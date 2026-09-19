@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花都花果山公园-广州花都区生态休闲与亲子游指南</title>
+    <meta name="description" content="花都花果山公园官方网站，提供公园最新入园政策、开放时间、交通指南、游玩攻略及特色景观介绍。是了解广州花都区自然风光与休闲娱乐的最佳平台。">
+    <meta name="keywords" content="花都花果山公园,广州花果山公园,花都公园,花都旅游景点,亲子游,自然生态">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-green: #2E7D32;
+            --light-green: #E8F5E9;
+            --accent-gold: #F9A825;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-body: #F5F7FA;
+            --white: #FFFFFF;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-gold);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-green);
+        }
+
+        .btn-visit {
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .btn-visit:hover {
+            background-color: #1B5E20;
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://picsum.photos/seed/park_hero/1600/900');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: var(--white);
+            border: none;
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .info-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .info-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-green);
+        }
+
+        .info-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Attractions */
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .attraction-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+        }
+
+        .card-link {
+            color: var(--primary-green);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: var(--light-green);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .guide-content h3 {
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+
+        .guide-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .guide-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+
+        .guide-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-gray);
+            display: none;
+            border-top: 1px solid #eee;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-green);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #263238;
+            color: #cfd8dc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            color: #cfd8dc;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .contact-info li {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                🌿 花都<span>花果山公园</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#attractions">景点介绍</a></li>
+                    <li><a href="#guide">游玩攻略</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#guide" class="btn-visit">立即购票</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>城市绿肺，休闲胜地</h1>
+                <p>位于广州花都区，集生态保护、文化展示与休闲游憩于一体的综合性公园。在这里，您可以远离城市喧嚣，享受大自然的宁静与美好。</p>
+                <div class="hero-buttons">
+                    <a href="#attractions" class="btn btn-primary">探索景点</a>
+                    <a href="#guide" class="btn btn-secondary">查看攻略</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Info Cards -->
+        <div class="container">
+            <div class="info-cards">
+                <div class="info-card">
+                    <span class="info-icon">🕐</span>
+                    <h3>开放时间</h3>
+                    <p>全年开放<br>06:00 - 22:00</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">🎟️</span>
+                    <h3>门票价格</h3>
+                    <p>成人票：免费<br>特殊设施：另计</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">📍</span>
+                    <h3>地理位置</h3>
+                    <p>广州市花都区新华镇<br>近花都汽车城</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">🚗</span>
+                    <h3>交通指南</h3>
+                    <p>自驾：导航至花都花果山公园<br>公交：花都X路</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Attractions Section -->
+        <section id="attractions" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>热门景点</h2>
+                    <p>精选公园内值得一看的自然与人文景观</p>
+                </div>
+                <div class="attractions-grid">
+                    <article class="attraction-card">
+                        <img src="https://picsum.photos/seed/park_lake/400/300" alt="花都湖" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">自然风光</span>
+                            <h3 class="card-title">花都湖风景区</h3>
+                            <p class="card-desc">公园的核心区域，拥有广阔的湖面和茂密的植被，是观鸟和摄影爱好者的天堂。</p>
+                            <a href="#" class="card-link">查看详情 &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="attraction-card">
+                        <img src="https://picsum.photos/seed/park_mountain/400/300" alt="花果山主峰" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">登高望远</span>
+                            <h3 class="card-title">花果山主峰</h3>
+                            <p class="card-desc">登顶可俯瞰花都城区全景，感受“一览众山小”的豪迈，适合徒步爱好者。</p>
+                            <a href="#" class="card-link">查看详情 &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="attraction-card">
+                        <img src="https://picsum.photos/seed/park_culture/400/300" alt="文化长廊" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">人文历史</span>
+                            <h3 class="card-title">岭南文化长廊</h3>
+                            <p class="card-desc">漫步其中，感受岭南古建筑的韵味，了解花都深厚的历史文化底蕴。</p>
+                            <a href="#" class="card-link">查看详情 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="section guide-section">
+            <div class="container">
+                <div class="guide-grid">
+                    <div class="guide-content">
+                        <h3>游玩指南</h3>
+                        <p>无论您是独自骑行、家庭出游还是团队建设，花都花果山公园都能满足您的需求。以下是为您整理的最佳游玩建议：</p>
+                        <ul class="guide-list">
+                            <li><strong>最佳季节：</strong>春秋两季气候宜人，适合户外活动。</li>
+                            <li><strong>推荐路线：</strong>东门入园 -> 花都湖栈道 -> 主峰观景台 -> 岭南文化长廊 -> 西门出园。</li>
+                            <li><strong>亲子活动：</strong>公园内设有儿童游乐区和科普教育基地，适合带小朋友前来。</li>
+                            <li><strong>摄影提示：</strong>清晨和傍晚是光线最好的时候，湖面景色尤为迷人。</li>
+                        </ul>
+                    </div>
+                    <div class="guide-image">
+                        <img src="https://picsum.photos/seed/park_people/600/400" alt="游客在公园游玩">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题</h2>
+                    <p>为您解答关于花都花果山公园的疑问</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <div class="faq-question">公园需要提前预约吗？<span>+</span></div>
+                        <div class="faq-answer">目前花都花果山公园实行免费开放政策，无需提前预约，持身份证即可直接入园。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">公园内有餐厅吗？<span>+</span></div>
+                        <div class="faq-answer">公园内设有游客服务中心，提供简单的茶水和小食，周边也有多家餐饮店铺。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">周末人多吗？<span>+</span></div>
+                        <div class="faq-answer">周末及节假日人流较多，建议错峰出行，或选择工作日前往以获得更好的游览体验。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">可以带宠物入园吗？<span>+</span></div>
+                        <div class="faq-answer">为了维护公园的卫生环境和游客安全，公园内禁止携带宠物入园。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🌿 花都花果山公园</h4>
+                    <p>致力于打造广州北部的生态休闲中心，为市民提供优质的游憩环境与科普教育平台。我们承诺保持环境的整洁与自然。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">公园简介</a></li>
+                        <li><a href="#">景点导览</a></li>
+                        <li><a href="#">新闻动态</a></li>
+                        <li><a href="#">志愿服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务支持</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">游客须知</a></li>
+                        <li><a href="#">失物招领</a></li>
+                        <li><a href="#">投诉建议</a></li>
+                        <li><a href="#">无障碍设施</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul class="contact-info">
+                        <li>📍 地址：广州市花都区新华镇XX路123号</li>
+                        <li>📞 电话：020-12345678</li>
+                        <li>📧 邮箱：info@huadu-guoshan.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 花都花果山公园管理方 版权所有 | 本站为演示页面，非官方网站</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
