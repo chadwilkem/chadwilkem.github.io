@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="帆板在线指南：提供帆板运动基础知识、装备选购建议、新手入门技巧、国内外赛事资讯及专业训练方法，助您安全畅享水上运动乐趣。">
+    <meta name="keywords" content="帆板,帆板运动,帆板装备,帆板新手,帆板教学,水上运动">
+    <title>帆板-水上运动入门与装备选购指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #006994;
+            --secondary-color: #00a8cc;
+            --accent-color: #ff9f1c;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f4f8fb;
+            --bg-white: #ffffff;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 105, 148, 0.7), rgba(0, 168, 204, 0.6)), url('https://picsum.photos/seed/sailing/1600/900') no-repeat center center/cover;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 159, 28, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(0, 168, 204, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Equipment Guide */
+        .equipment-section {
+            background-color: var(--bg-white);
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            align-items: center;
+        }
+
+        .equipment-image {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .equipment-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .equip-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .check-icon {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+
+        .equip-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .equip-info p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .skill-step {
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid #e0e0e0;
+        }
+
+        .skill-step::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        .skill-step h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .skill-step p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Safety Tips */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .tip-card {
+            background: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .tip-card h4 {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .tip-card p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            background-color: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 200px; /* Approximate max height */
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .equipment-grid, .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">Sail<span>Board</span>指南</a>
+            <nav>
+                <ul>
+                    <li><a href="#intro" class="active">运动简介</a></li>
+                    <li><a href="#equipment">装备选购</a></li>
+                    <li><a href="#skills">入门技巧</a></li>
+                    <li><a href="#safety">安全贴士</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#equipment" class="cta-btn">开始选购</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>乘风破浪，掌控帆板</h1>
+            <p>帆板运动是集技巧、力量与自然于一体的水上运动。无论您是寻求刺激的冲浪者，还是追求平静的休闲爱好者，这里都有属于您的航海方式。</p>
+            <div class="hero-buttons">
+                <a href="#skills" class="btn btn-primary">新手入门</a>
+                <a href="#equipment" class="btn btn-outline">了解装备</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section id="intro" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>什么是帆板运动？</h2>
+                <p>帆板（Windsurfing）是由板体、帆杆、帆布和桅杆等部件组成的一种风力驱动滑行工具。</p>
+            </div>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="icon-box">🌊</div>
+                    <h3>水上冲浪</h3>
+                    <p>利用风帆的推力，使板体在水面滑行，是体验速度与激情的最佳方式。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="icon-box">🚀</div>
+                    <h3>速度竞技</h3>
+                    <p>通过调整帆的角度和板体的滑行状态，在平潮区也能实现惊人的滑行速度。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="icon-box">🌿</div>
+                    <h3>休闲体验</h3>
+                    <p>在平静的水面上享受微风与阳光，是亲近自然、放松身心的绝佳选择。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Section -->
+    <section id="equipment" class="section equipment-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>核心装备选购指南</h2>
+                <p>选择合适的装备是安全上板的前提</p>
+            </div>
+            <div class="equipment-grid">
+                <img src="https://picsum.photos/seed/windsurf/600/400" alt="帆板与装备示意图" class="equipment-image">
+                <div class="equipment-list">
+                    <div class="equip-item">
+                        <div class="check-icon">✓</div>
+                        <div class="equip-info">
+                            <h4>板体</h4>
+                            <p>板体是帆板的主体，分为竞速板、浪板和休闲板。新手建议选择宽大、吃水较浅的休闲板，稳定性更好。</p>
+                        </div>
+                    </div>
+                    <div class="equip-item">
+                        <div class="check-icon">✓</div>
+                        <div class="equip-info">
+                            <h4>帆</h4>
+                            <p>帆的面积决定了动力大小。面积越大，风力需求越小，但操控难度增加。初学者应从较小的帆开始练习。</p>
+                        </div>
+                    </div>
+                    <div class="equip-item">
+                        <div class="check-icon">✓</div>
+                        <div class="equip-info">
+                            <h4>舵与尾鳍</h4>
+                            <p>舵用于控制方向，尾鳍用于保持板体稳定。确保尾鳍与舵连接牢固，这是转向和平衡的关键。</p>
+                        </div>
+                    </div>
+                    <div class="equip-item">
+                        <div class="check-icon">✓</div>
+                        <div class="equip-info">
+                            <h4>救生衣</h4>
+                            <p>无论水平高低，下水前务必穿戴合格的救生衣，并检查所有固定装置是否锁紧。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>新手上板三部曲</h2>
+                <p>循序渐进，从站立到滑行</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-content">
+                    <div class="skill-step">
+                        <h4>1. 起板与站稳</h4>
+                        <p>将板体推入水中，踩上板尾，一手拉帆杆，一手推板身，使板体滑出水面。站稳后，保持双脚分开与肩同宽，膝盖微弯，重心前移。</p>
+                    </div>
+                    <div class="skill-step">
+                        <h4>2. 调整帆的角度</h4>
+                        <p>面对风向，将帆杆拉向身体，调整帆的角度以捕捉风力。左手推帆杆，右手拉帆布，感受风对帆的推力，将板体推向滑行状态。</p>
+                    </div>
+                    <div class="skill-step">
+                        <h4>3. 转向与收帆</h4>
+                        <p>利用舵控制转向，通过调整身体重心和帆的角度改变滑行方向。滑行结束后，慢慢松开帆布，将帆收起并固定在板体上。</p>
+                    </div>
+                </div>
+                <img src="https://picsum.photos/seed/sailing2/600/500" alt="帆板教学示意图" class="equipment-image" style="box-shadow: var(--shadow);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Section -->
+    <section id="safety" class="section" style="background-color: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2>安全上板须知</h2>
+                <p>安全是享受帆板运动的前提</p>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h4>检查天气</h4>
+                    <p>出发前务必查看风力预报，避免在超过自身能力范围的强风或雷雨天气下水。</p>
+                </div>
+                <div class="tip-card">
+                    <h4>结伴而行</h4>
+                    <p>尽量在有人值守的水域练习，或与有经验的伙伴结伴，以便在突发状况下互相协助。</p>
+                </div>
+                <div class="tip-card">
+                    <h4>防寒防晒</h4>
+                    <p>水上紫外线强烈，即使夏季也需涂抹防晒霜。冬季下水需穿戴防寒泳衣，防止失温。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>常见问题解答</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">零基础需要多长时间能学会？</div>
+                    <div class="faq-answer">
+                        <p>对于成年人，通常在专业教练的指导下，经过3-5天的集中练习，可以掌握基本的起板和滑行技巧。完全掌握转向和不同风速下的操控则需要更长时间的练习。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">多大体重适合玩帆板？</div>
+                    <div class="faq-answer">
+                        <p>帆板运动对体重没有绝对限制。对于较重的初学者，建议选择板体面积更大、吃水更深的休闲板，并使用面积较大的帆来获取足够的动力。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">去哪里可以体验帆板？</div>
+                    <div class="faq-answer">
+                        <p>国内沿海城市如青岛、大连、厦门、三亚以及内陆湖泊如千岛湖都有专业的帆板俱乐部和租赁服务。建议选择有救生员值守的正规场地。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>SailBoard指南</h3>
+                    <p>致力于为帆板爱好者提供最全面的运动指南、装备资讯与安全知识，让每一次出海都充满乐趣与安全。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速导航</h3>
+                    <ul>
+                        <li><a href="#intro">运动简介</a></li>
+                        <li><a href="#equipment">装备选购</a></li>
+                        <li><a href="#skills">入门技巧</a></li>
+                        <li><a href="#safety">安全贴士</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>相关资源</h3>
+                    <ul>
+                        <li><a href="#">国际帆板联合会</a></li>
+                        <li><a href="#">中国帆船帆板运动协会</a></li>
+                        <li><a href="#">专业俱乐部推荐</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 帆板指南网 版权所有 | 本站内容仅供参考，具体操作请遵循专业教练指导。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
