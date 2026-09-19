@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HLod姐 - 独立游戏攻略与深度评测平台</title>
+    <meta name="description" content="HLod姐专注于独立游戏深度评测、玩法攻略与硬核技巧分享，为玩家提供最详尽的独立游戏体验指南。">
+    <meta name="keywords" content="HLod姐,独立游戏,游戏攻略,游戏评测,硬核玩家">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --bg-dark: #1e1e2e;
+            --bg-card: #2d2d44;
+            --text-main: #ffffff;
+            --text-muted: #a0a0b0;
+            --accent-green: #00b894;
+            --accent-red: #d63031;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(30, 30, 46, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            color: var(--text-main);
+            width: 200px;
+            transition: width 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            width: 240px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(108, 92, 231, 0.1) 0%, rgba(30, 30, 46, 0) 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #fff, var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(108, 92, 231, 0.2);
+            color: var(--secondary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(108, 92, 231, 0.3);
+        }
+
+        /* Main Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        /* Featured Section */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 1rem;
+        }
+
+        .article-card {
+            background: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .article-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            background-color: #000;
+        }
+
+        .article-content {
+            padding: 1.5rem;
+        }
+
+        .meta-info {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .meta-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .article-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .article-excerpt {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .read-more:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-widget {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .rank-list {
+            counter-reset: rank;
+        }
+
+        .rank-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .rank-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .rank-number {
+            counter-increment: rank;
+            content: counter(rank);
+            width: 24px;
+            height: 24px;
+            background: var(--bg-dark);
+            border: 1px solid var(--text-muted);
+            color: var(--text-muted);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .rank-item:nth-child(1) .rank-number {
+            border-color: #ffd700;
+            color: #ffd700;
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .rank-item:nth-child(2) .rank-number {
+            border-color: #c0c0c0;
+            color: #c0c0c0;
+            background: rgba(192, 192, 192, 0.1);
+        }
+
+        .rank-item:nth-child(3) .rank-number {
+            border-color: #cd7f32;
+            color: #cd7f32;
+            background: rgba(205, 127, 50, 0.1);
+        }
+
+        .rank-title {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .rank-title:hover {
+            color: var(--primary-color);
+        }
+
+        /* Category Grid */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cat-card {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        .cat-card:hover {
+            background: rgba(108, 92, 231, 0.1);
+        }
+
+        .cat-icon {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .cat-name {
+            font-weight: 600;
+        }
+
+        .cat-count {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background: #151520;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .footer-col p, .footer-col a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .search-box input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                HLod<span>姐</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">游戏评测</a></li>
+                    <li><a href="#">硬核攻略</a></li>
+                    <li><a href="#">深度访谈</a></li>
+                    <li><a href="#">资源下载</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索游戏或攻略...">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>HLod姐 - 探索独立游戏的无限可能</h1>
+            <p>专注于挖掘那些被忽视的精品独立游戏，提供最硬核的通关技巧与深度评测。</p>
+            <div class="tags">
+                <span class="tag">#像素风</span>
+                <span class="tag">#恐怖解谜</span>
+                <span class="tag">#剧情向</span>
+                <span class="tag">#模拟经营</span>
+                <span class="tag">#平台跳跃</span>
+            </div>
+        </section>
+
+        <div class="main-layout">
+            <!-- Content Area -->
+            <section class="content-area">
+                <h2 class="section-title">最新深度评测</h2>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/hlod1/800/400" alt="游戏封面" class="article-image">
+                    <div class="article-content">
+                        <div class="meta-info">
+                            <span>🎮 独立游戏</span>
+                            <span>📅 2023-10-24</span>
+                            <span>⭐ 9.2/10</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">《深空迷航》：在无尽的宇宙中寻找最后的文明遗迹</a></h3>
+                        <p class="article-excerpt">
+                            这是一款融合了探索、建造与生存元素的太空模拟游戏。HLod姐带你深入解析其复杂的科技树系统以及令人窒息的视觉美学。从新手引导到高难度区域，我们为你准备了详尽的生存指南。
+                        </p>
+                        <a href="#" class="read-more">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/hlod2/800/400" alt="游戏封面" class="article-image">
+                    <div class="article-content">
+                        <div class="meta-info">
+                            <span>🧩 解谜冒险</span>
+                            <span>📅 2023-10-20</span>
+                            <span>⭐ 8.5/10</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">《回声深渊》：音乐与光影交织的恐怖迷宫</a></h3>
+                        <p class="article-excerpt">
+                            不同于传统的Jump Scare，这款游戏利用声波原理设计关卡。HLod姐详细拆解了三个核心关卡的声学机关解法，并分享了如何利用环境音效来预判敌人的位置。
+                        </p>
+                        <a href="#" class="read-more">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/hlod3/800/400" alt="游戏封面" class="article-image">
+                    <div class="article-content">
+                        <div class="meta-info">
+                            <span>⚔️ 动作RPG</span>
+                            <span>📅 2023-10-15</span>
+                            <span>⭐ 7.8/10</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">《霓虹武士》：高难度Boss战的完美闪避技巧</a></h3>
+                        <p class="article-excerpt">
+                            面对最终Boss的三阶段连招，普通攻击往往无效。本文将展示HLod姐独家研发的“相位移动”连招流，助你轻松突破难关，解锁隐藏结局。
+                        </p>
+                        <a href="#" class="read-more">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#" style="color: var(--primary-color); font-weight: bold;">加载更多内容...</a>
+                </div>
+            </section>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3 class="section-title" style="border-left-color: var(--accent-green);">本周热门</h3>
+                    <div class="rank-list">
+                        <div class="rank-item">
+                            <span class="rank-number">1</span>
+                            <a href="#" class="rank-title">2023年最值得期待的5款独立游戏</a>
+                        </div>
+                        <div class="rank-item">
+                            <span class="rank-number">2</span>
+                            <a href="#" class="rank-title">《空洞骑士》全收集路线图</a>
+                        </div>
+                        <div class="rank-item">
+                            <span class="rank-number">3</span>
+                            <a href="#" class="rank-title">如何优化低配电脑的独立游戏体验</a>
+                        </div>
+                        <div class="rank-item">
+                            <span class="rank-number">4</span>
+                            <a href="#" class="rank-title">独立游戏开发者访谈：HLod姐的十年</a>
+                        </div>
+                        <div class="rank-item">
+                            <span class="rank-number">5</span>
+                            <a href="#" class="rank-title">Steam特卖：本周折扣汇总</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="section-title" style="border-left-color: var(--accent-red);">游戏分类</h3>
+                    <div class="category-grid">
+                        <div class="cat-card">
+                            <span class="cat-icon">🚀</span>
+                            <div class="cat-name">科幻</div>
+                            <div class="cat-count">120篇</div>
+                        </div>
+                        <div class="cat-card">
+                            <span class="cat-icon">👻</span>
+                            <div class="cat-name">恐怖</div>
+                            <div class="cat-count">85篇</div>
+                        </div>
+                        <div class="cat-card">
+                            <span class="cat-icon">🏰</span>
+                            <div class="cat-name">沙盒</div>
+                            <div class="cat-count">200篇</div>
+                        </div>
+                        <div class="cat-card">
+                            <span class="cat-icon">🧩</span>
+                            <div class="cat-name">解谜</div>
+                            <div class="cat-count">95篇</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="section-title" style="border-left-color: #e17055;">玩家问答</h3>
+                    <div style="font-size: 0.9rem; color: var(--text-muted);">
+                        <p style="margin-bottom: 1rem;"><strong>Q: HLod姐推荐适合新手的像素风游戏吗？</strong></p>
+                        <p style="margin-bottom: 1rem;">A: 推荐《蔚蓝》和《星露谷物语》，这两款游戏在难度曲线和美术风格上都非常适合入门。</p>
+                        <a href="#" style="color: var(--primary-color);">查看更多问答 &rarr;</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>HLod姐</h3>
+                    <p>致力于为独立游戏爱好者提供最专业的评测与攻略服务。</p>
+                    <p>联系邮箱：contact@hlodjie.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速导航</h3>
+                    <a href="#">关于我们</a>
+                    <a href="#">投稿指南</a>
+                    <a href="#">隐私政策</a>
+                    <a href="#">免责声明</a>
+                </div>
+                <div class="footer-col">
+                    <h3>关注我们</h3>
+                    <p>微信公众号：HLod姐游戏屋</p>
+                    <p>Bilibili：HLod姐</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 HLod姐独立游戏平台 版权所有.
+            </div>
+        </div>
+    </footer>
+
+</body>
+                  </html>
