@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="爱欲亲娘提供深度的情感心理学与家庭关系咨询，探讨亲子沟通、亲密关系修复及家庭情感修复的专业平台。">
+    <meta name="keywords" content="爱欲亲娘,情感咨询,家庭关系,亲子沟通,亲密关系修复">
+    <title>爱欲亲娘-情感修复与家庭关系咨询平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B5A2B;
+            --primary-hover: #6D4C2F;
+            --accent-color: #D4AF37;
+            --bg-color: #F9F7F2;
+            --text-main: #2C2C2C;
+            --text-secondary: #666666;
+            --white: #FFFFFF;
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #fdfbf7 0%, #e8e4dc 100%);
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--text-main);
+        }
+
+        .hero-text h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: 12px;
+            background-color: #fff;
+            border: 1px solid #eee;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            box-shadow: var(--card-shadow);
+            transform: translateY(-5px);
+            border-color: transparent;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        /* Articles Section */
+        .articles {
+            padding: 80px 0;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .article-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .article-img {
+            height: 200px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .article-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 24px;
+        }
+
+        .article-tag {
+            font-size: 12px;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .article-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .article-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.6;
+            display: none;
+            padding-left: 10px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2C2C2C;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+
+            .header-inner {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-color)"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                <span>爱欲亲娘</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#articles">情感文章</a></li>
+                    <li><a href="#services">咨询服务</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-btn">立即咨询</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>修复家庭关系，<br>重建<span>亲密连接</span>的温暖港湾</h1>
+                    <p>我们专注于家庭情感咨询与亲子关系修复，提供专业的心理学视角，帮助您化解隔阂，找回爱的力量。</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="cta-btn">免费心理测评</a>
+                        <a href="#articles" class="btn-outline">阅读精选文章</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/familylove/600/400" alt="温馨的家庭互动场景">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>核心服务领域</h2>
+                    <p>针对不同家庭阶段的情感困扰，提供精准的解决方案</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">❤️</div>
+                        <h3>亲子沟通修复</h3>
+                        <p>解决代际冲突、叛逆期疏导及沟通障碍，建立良性的亲子对话机制。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💑</div>
+                        <h3>亲密关系维护</h3>
+                        <p>帮助伴侣走出情感倦怠，重建激情与信任，改善婚姻质量。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏠</div>
+                        <h3>家庭系统重组</h3>
+                        <p>针对离异重组家庭或代际冲突，梳理家庭边界与权力结构。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section id="articles" class="articles">
+            <div class="container">
+                <div class="section-header">
+                    <h2>深度情感洞察</h2>
+                    <p>探索人性深处的情感需求，学习科学的情感经营之道</p>
+                </div>
+                <div class="article-grid">
+                    <article class="article-card">
+                        <div class="article-img">
+                            <img src="https://picsum.photos/seed/parenting/400/300" alt="亲子沟通">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-tag">亲子关系</span>
+                            <h3>如何打破“说教式”沟通？建立有效亲子对话的三个步骤</h3>
+                            <p>很多家长苦恼于孩子不愿听自己说话。其实，有效沟通的关键不在于“说”，而在于“听”。本文将介绍如何通过共情与倾听，打开孩子的心扉。</p>
+                            <a href="#" class="read-more">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <div class="article-img">
+                            <img src="https://picsum.photos/seed/love/400/300" alt="亲密关系">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-tag">婚姻经营</span>
+                            <h3>爱欲亲娘：在柴米油盐中找回激情与亲密感</h3>
+                            <p>婚姻进入平淡期是常态，但激情的消失不代表爱的终结。通过心理学的“爱情地图”理论，重新发现伴侣身上被忽略的美好。</p>
+                            <a href="#" class="read-more">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <div class="article-img">
+                            <img src="https://picsum.photos/seed/emotion/400/300" alt="情绪管理">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-tag">情绪管理</span>
+                            <h3>原生家庭的影响：如何摆脱代际创伤的束缚</h3>
+                            <p>我们的性格和行为模式深受原生家庭影响。了解并正视这些影响，是我们走向独立与成熟的第一步。</p>
+                            <a href="#" class="read-more">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container faq-container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">心理咨询适合什么样的人群？</div>
+                    <div class="faq-answer">任何感到家庭关系紧张、亲子教育困难、婚姻情感危机或渴望自我成长的个人及家庭都可以寻求帮助。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">咨询过程是保密的吗？</div>
+                    <div class="faq-answer">是的，心理咨询严格遵循职业道德保密原则，除非涉及生命安全或法律强制要求，否则不会泄露任何信息。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">初次咨询需要准备什么？</div>
+                    <div class="faq-answer">您不需要准备任何材料，只需带着您最真实的困惑和期望，在舒适的环境下与咨询师进行交流即可。</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" style="background-color: var(--primary-color); padding: 60px 0; text-align: center; color: white;">
+            <div class="container">
+                <h2 style="font-size: 28px; margin-bottom: 20px;">准备好改变了吗？</h2>
+                <p style="margin-bottom: 30px; font-size: 18px; opacity: 0.9;">专业咨询师在线等待，为您提供一对一的情感支持与指导。</p>
+                <a href="#" class="cta-btn" style="background-color: white; color: var(--primary-color);">预约免费咨询</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于爱欲亲娘</h4>
+                    <p style="font-size: 14px; line-height: 1.8;">我们致力于提供专业的家庭情感咨询与心理辅导服务，帮助每一个家庭构建和谐、健康的情感环境。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">服务项目</a></li>
+                        <li><a href="#">专家团队</a></li>
+                        <li><a href="#">成功案例</a></li>
+                        <li><a href="#">隐私声明</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：support@aiyuqinmama.com</li>
+                        <li>地址：北京市朝阳区心理咨询中心</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 爱欲亲娘情感咨询平台 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Interaction
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+  </html>
